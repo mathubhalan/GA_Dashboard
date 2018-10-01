@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  1 15:24:52 2018
+
+@author: Mathu_Gopalan
+configuration file, with 
+-secret filepath, 
+-list of GA views and property details
+-list of metrics to be pulled out
+-report date range - start date and end date
+-
+
+"""
+

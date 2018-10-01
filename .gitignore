@@ -1,7 +1,8 @@
-My Project 26766-ae554bd965b7.P12
-response.csv
-result.csv
-config.yaml
-
+/My Project 26766-ae554bd965b7.P12
+/response.csv
+/config.yaml
 /Google Analytics Python Notebook.ipynb
 /result1.csv
+/*.yaml
+.ipynb_checkpoints
+.spyproject

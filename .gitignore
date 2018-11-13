@@ -10,3 +10,5 @@
 /*.ini
 /test.py
 /pullGA.py
+/*.csv
+__pycache__

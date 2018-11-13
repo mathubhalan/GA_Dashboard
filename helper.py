@@ -106,20 +106,21 @@ def pull_data(views,dimensions,metrics,date_range):
     Output: The data would be loaded in SFTP site as a csv file    
     '''
     cfg_dict = read_config("config.ini")
+    print("--------Reading the configuration files ---------------------")
     analytics = initialize_analyticsreporting(cfg_dict)
+    print("--------Requesting Google Analytics for data ----------------")
     response = get_report(analytics,views,dimensions,metrics,date_range)
+    print("--------Recieved Data and loading into dataframe ------------")
     result,columnHeader,metricHeader,columns = parse_data(response)
     df = pd.DataFrame(data = result)
     df.columns=columnHeader
     now=datetime.datetime.now()
+    print("--------Creating the CSV file -------------------------------")
     timestamp = str(now.strftime("%Y%m%d_%H-%M-%S"))
     file_name = "Result"+timestamp+".csv"
-    #result.to_csv('result3.csv')
-    #print(df.head())
-    #print(result.head())
     df.to_csv(file_name)
-    print(f"Loaded the data with filename as {file_name}")
-    #print("Data Loaded successfully and filename is {}".format(file_name))
+    print(f"\n\n Loaded the data with file named as {file_name}")
+   
     
     
     

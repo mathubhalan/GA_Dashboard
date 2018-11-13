@@ -7,3 +7,6 @@
 .ipynb_checkpoints
 .spyproject
 /requirment.txt
+/*.ini
+/test.py
+/pullGA.py

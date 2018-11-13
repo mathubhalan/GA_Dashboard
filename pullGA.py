@@ -24,6 +24,7 @@ DISCOVERY_URI = ('https://analyticsreporting.googleapis.com/$discovery/rest')
 KEY_FILE_LOCATION = '.\My Project 26766-ae554bd965b7.p12'
 SERVICE_ACCOUNT_EMAIL = 'gatest@valid-progress-217020.iam.gserviceaccount.com'
 VIEW_ID = '172386207'
+#'174803979'
 
 
 def initialize_analyticsreporting():
@@ -136,9 +137,10 @@ def main():
     result,columnHeader,metricHeader,columns = parse_data(response)
     df = pd.DataFrame(data = result)
     df.columns=columnHeader
+    print(df.head())
     print("columnHeader :", columnHeader)
     print("metricHeader :", metricHeader)
-    #result.to_csv('result1.csv')
+    result.to_csv('result2.csv')
     #write_dict_csv(response)
     
 if __name__ == '__main__':

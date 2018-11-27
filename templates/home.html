@@ -1,0 +1,45 @@
+<DOCTYPE! html>
+<html>
+	<h1> Simple Form </h1>
+	<form action="http://127.0.0.1:5000/homepg" method="POST">
+		<label>View ID
+             <input type="text" name="viewid">
+		</label>
+		<br><br><br>
+		<div class="background">
+			<label class="dimensions">Dimensions<br><br>
+				<input type="checkbox" name="dim" value="ga:hostname"> ga:hostname<br>
+				<input type="checkbox" name="dim" value="ga:pagePath"> ga:pagePath<br> 
+				<input type="checkbox" name="dim" value="ga:pagePathLevel1"> ga:pagePathLevel1<br> 
+				<input type="checkbox" name="dim" value="ga:pagePathLevel2"> ga:pagePathLevel2<br> 
+				<input type="checkbox" name="dim" value="ga:pagePathLevel3"> ga:pagePathLevel3<br> 
+				<input type="checkbox" name="dim" value="ga:pagePathLevel4"> ga:pagePathLevel4<br> 
+				<input type="checkbox" name="dim" value="ga:hostname"> ga:pageTitle<br> 
+				<input type="checkbox" name="dim" value="ga:landingPagePath"> ga:landingPagePath<br> 
+				<input type="checkbox" name="dim" value="ga:secondPagePath"> ga:secondPagePath<br>
+				<input type="checkbox" name="dim" value="ga:exitPagePath"> ga:exitPagePath<br> 
+				<input type="checkbox" name="dim" value="ga:previousPagePath"> ga:previousPagePath<br> 
+				<input type="checkbox" name="dim" value="ga:pageDepth"> ga:pageDepth<br>
+			</label>
+			<br><br><br>
+			<label class="metrics">Metrics<br><br>
+				<input type="checkbox" name="met" value="ga:sessions"> ga:sessions<br>
+				<input type="checkbox" name="met" value="ga:bounces"> ga:bounces<br>
+				<input type="checkbox" name="met" value="ga:bounceRate"> ga:bounceRate<br>
+				<input type="checkbox" name="met" value="ga:sessionDuration"> ga:sessionDuration<br>
+				<input type="checkbox" name="met" value="ga:avgSessionDuration"> ga:avgSessionDuration<br>
+				<input type="checkbox" name="met" value="ga:uniqueDimensionCombinations"> ga:uniqueDimensionCombinations<br>
+				<input type="checkbox" name="met" value="ga:hits"> ga:hits<br>
+			</label>
+			<br><br>
+			<label class="startdate">Start Date:
+				<input type="text" name="stdate" class="simple_date" placeholder="YYYY-MM-DD">
+			</label>
+			<br><br>
+			<label class="enddate">End Date:
+				<input type="text" name="eddate" class="simple_date" placeholder="YYYY-MM-DD">
+			</label>
+			<br><br>
+		<input type="submit">
+	</form>
+</html>

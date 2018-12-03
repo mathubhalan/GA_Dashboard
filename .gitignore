@@ -11,3 +11,4 @@
 /pullGA.py
 /*.csv
 __pycache__
+/GetGAData.ipynb

@@ -114,13 +114,21 @@ def pull_data(views,dimensions,metrics,date_range):
     result,columnHeader,metricHeader,columns = parse_data(response)
     df = pd.DataFrame(data = result)
     df.columns=columnHeader
+    return df
+    
+    
+def create_csv(data_frame,location):
+    '''
+    function to write the data frame as CSV
+    Input: Data frame and the SFTP location
+    Output: writes the file in the SFTP location
+    '''
     now=datetime.datetime.now()
     print("--------Creating the CSV file -------------------------------")
     timestamp = str(now.strftime("%Y%m%d_%H-%M-%S"))
     file_name = "Result"+timestamp+".csv"
     df.to_csv(file_name)
     print(f"\n\n Loaded the data with file named as {file_name}")
-   
     
     
     
